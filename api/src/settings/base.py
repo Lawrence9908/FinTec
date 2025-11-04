@@ -140,5 +140,9 @@ LOGGING_CONFIG = None
 
 # LOGURU LOGGER
 LOGURU_LOGGING  = {
-    
+    "handlers":[
+        {
+            
+        }
+    ]
 }
