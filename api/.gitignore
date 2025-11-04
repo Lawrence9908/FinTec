@@ -4,7 +4,6 @@ staticfiles/
 !.envs/.env.example
 .idea
 .vscode
-migrations/*
 venv
 __pycache__
 
