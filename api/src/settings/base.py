@@ -25,6 +25,14 @@ DJANGO_APP = [
 ]
 
 LOCAL_APPS = [
+ "core_apps.common",
+ "core_apps.cards",
+ "core_apps.user_auth",
+ "core_apps.user_profile",
+ "core_apps.accounts"
+]
+
+THIRD_PARTY_APPS = [
     'rest_framework',
     'django_countries',
     'phonenumber_field',
@@ -35,8 +43,6 @@ LOCAL_APPS = [
     'djcelery_email',
     'django_celery_beat',
 ]
-
-THIRD_PARTY_APPS = []
 
 INSTALLED_APPS = DJANGO_APP + THIRD_PARTY_APPS + LOCAL_APPS
 
