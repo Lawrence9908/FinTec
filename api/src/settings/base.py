@@ -132,3 +132,13 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# DISABLING DEFUALT DJANGOR LOGGER
+
+LOGGING_CONFIG = None
+
+# LOGURU LOGGER
+LOGURU_LOGGING  = {
+    
+}
