@@ -11,7 +11,7 @@ python << END
 
 import sys
 import time
-import pyscopg2
+import psycopg2
 suggest_unrecoverable_after = 30
 start  = time.time()
 
@@ -25,7 +25,7 @@ while True:
             port="${POSTGRES_PORT}",
         )
         break
-    except psycopg2.OPerationalError as error:
+    except psycopg2.OperationalError as error:
         sys.stderr.write("Waiting for PostgreSql to become available...\n")
         if time.time() - start > suggest_unrecoverable_after:
             sys.stderr.write(
@@ -37,4 +37,4 @@ END
 
 echo  >&2 'PostgresSQL is avaible'
 
-echo "$@"
+exec "$@"
