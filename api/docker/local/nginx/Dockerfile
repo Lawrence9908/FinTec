@@ -1,0 +1,1 @@
+FROM docker.io/nginx:1.27.9-apine3.19-slim
