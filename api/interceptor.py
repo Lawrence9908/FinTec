@@ -1,0 +1,15 @@
+from  loguru import logger
+import logging
+
+class InterceptHadler(logging.handler):
+    def emit(self, record):
+        try:
+            level  = logger.level(record.levelname).name
+        except ValueError:
+            level = record.levelno
+        frame, depth  =  logging.currentframe(), 2
+
+        while frame.f_code.co_filename  ==  logging.__file__:
+            frame  = frame.f_back
+            depth += 1
+        logger.opt(depth=depth, exception=record.exec_info).log(level, record.getMessage())
