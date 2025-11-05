@@ -24,3 +24,12 @@ DEFAULT_FROM_EMAIL =  getenv("DEFAULT_fROM_EMAIL")
 DOMAIN = getenv("DOMAIN")
 
 MAX_UPLOAD_sIZE = 1 * 1024 * 1024
+
+# SECURITY
+CRSF_TRUSTED_ORIGINS = ["http://localhost:8080"]
+
+LOCKOUT_DURATION =timedelta(minutes=1)
+
+LOGGING_ATTEMPTS = 3
+
+OPT_EXPIRATION  = timedelta(minutes=1)
